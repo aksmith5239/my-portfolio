@@ -35,15 +35,15 @@ const ProjectList = ({ category }) => {
         {
             name:"My Tech Blog",
             description: "My Tech Blog is an interactive web based blog site",
-            url: "",
+            url: "https://my-tech-blog-2020.herokuapp.com/",
             github: " https://github.com/aksmith5239/team-profile-generator",
             category: "portfolio"
         }, 
         {
-            name:"My Team",
-            description: "A NodeJs command line application to generate teams of employees",
-            url: "",
-            github: " https://github.com/aksmith5239/tech-blog",
+            name:"Weather Dash",
+            description: "A JavaScript application to search for current weather data",
+            url: "https://aksmith5239.github.io/weather-dash/",
+            github: " https://github.com/aksmith5239/weather-dash",
             category: "portfolio"
         }
     ])

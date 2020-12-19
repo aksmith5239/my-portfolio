@@ -123,6 +123,45 @@ footer li {
   flex-wrap: wrap;
 
 }
+
+.container {
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact-form {
+  display:block;
+  justify-content: center;
+}
+
+.contact-form label{
+  display:block;
+}
+
+.contact-form input{
+  width:75%;
+  height:30px;
+  
+}
+
+.contact-form textarea{
+  width:75%;
+  border-radius: 5px;
+}
+
+button {
+  background-color:var(--tertiary); /* Green */
+  border: none;
+  color: var(--primary);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius:5px;
+}
 .navActive {
   color: var(--tertiary);
   background: var(--light-blue);
