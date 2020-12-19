@@ -73,32 +73,39 @@ nav a:hover, nav li:hover{
   color: var(--secondary);
 }
 
-
-
-/* Style the content */
 .content {
   background-color: var(--light);
   padding: 10px;
   height: 200px; /* Should be removed. Only for demonstration */
 }
 
+
+.img-thumbnail {
+  width: auto;
+  height: 300px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+
 /* Style the footer */
 footer {
   background-color: var(--light-blue);
   padding: 10px;
-  margin-left: 10px;
   align-items:center;
   text-align:center;
-  justify-content: space-between;
-  display:inline-block;
-  width:100%;
+  justify-content: center;
+  display:flex;
+  
 }
 footer ul {
-  justify-content: space-between;
+  justify-content: center;
 }
 footer li {
   display: inline-block;
-  justify-content: space-between;
+  justify-content: center;
+  text-align:center;
+  padding: 10px;
 }
 .portfolio-image {
   border: 1px solid var(--primary);
