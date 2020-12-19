@@ -31,6 +31,20 @@ const ProjectList = ({ category }) => {
             url: "",
             github: " https://github.com/aksmith5239/team-profile-generator",
             category: "portfolio"
+        }, 
+        {
+            name:"My Tech Blog",
+            description: "My Tech Blog is an interactive web based blog site",
+            url: "",
+            github: " https://github.com/aksmith5239/team-profile-generator",
+            category: "portfolio"
+        }, 
+        {
+            name:"My Team",
+            description: "A NodeJs command line application to generate teams of employees",
+            url: "",
+            github: " https://github.com/aksmith5239/tech-blog",
+            category: "portfolio"
         }
     ])
     const currentProjects = projects.filter((project) => project.category === category);
