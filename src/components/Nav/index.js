@@ -1,20 +1,15 @@
 import React from 'react';
 
-function Nav() {
-    
-const categories = [
-    {
-        name: "porfolio",
-        description: "a portfolio of web development work by Allison K. Smith",
-    },
-    {
-        name: "resume",
-        description: "a downloadable resume of Allison K. Smith's web development work",
-    }
-]
-function categorySelected(name) {
-    console.log(`${name} clicked`);
-}
+
+function Nav(props) {
+  
+    const {
+        categories = [],
+        setCurrentCategory,
+        currentCategory,
+      } = props;
+
+
     return(
         <header>
             <h2>
@@ -30,12 +25,12 @@ function categorySelected(name) {
                         </a>
                     </li>
                     <li>
-                        <span onClick={categorySelected}>contact </span>
+                        <span> contact </span>
                     </li>
                     
                         {categories.map((category) => (
-                            <li className="navItem" key={category.name}>
-                                <span onClick={() => categorySelected(category.name)}>{category.name}</span>
+                            <li className={`navItem ${currentCategory.name === category.name && 'navActive'}`} key={category.name}>
+                                <span onClick={() => setCurrentCategory(category.name)}>{category.name}</span>
                             </li>
                         ))}
                     

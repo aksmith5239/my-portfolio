@@ -110,3 +110,13 @@ footer li {
 .portfolio-image {
   border: 1px solid var(--primary);
 }
+
+.project-image {
+  border: 2px solid var(--secondary);
+}
+
+.navActive {
+  color: var(--tertiary);
+  background: var(--light-blue);
+  border-radius: 5px;
+}
