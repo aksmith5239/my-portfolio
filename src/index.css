@@ -69,3 +69,7 @@ body {
   background-color: var(--light-blue);
   padding: 10px;
 }
+
+.portfolio-image {
+  border: 1px solid var(--primary);
+}
