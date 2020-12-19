@@ -35,15 +35,31 @@ body {
   color: var(--dark);
 }
 
-/* Style the top navigation bar */
-.nav {
+li {
+  list-style: none;
+}
+
+header {
   overflow: hidden;
   background-color: var(--primary) ;
 }
 
-/* Style the topnav links */
-.nav a {
+header a{
   float: left;
+  display: block;
+  color: var(--light-tan);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+/* Style the top navigation bar */
+nav {
+  background-color: var(--primary) ;
+}
+
+/* Style the topnav links */
+nav a, nav li {
+  float: right;
   display: block;
   color: var(--light-tan);
   text-align: center;
@@ -52,10 +68,12 @@ body {
 }
 
 /* Change color on hover */
-.nav a:hover {
+nav a:hover, nav li:hover{
   background-color:var(--light-tan);
-  color: var(--tertiary);
+  color: var(--secondary);
 }
+
+
 
 /* Style the content */
 .content {
