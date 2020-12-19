@@ -115,6 +115,11 @@ footer li {
   border: 2px solid var(--secondary);
 }
 
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+
+}
 .navActive {
   color: var(--tertiary);
   background: var(--light-blue);

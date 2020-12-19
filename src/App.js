@@ -7,7 +7,7 @@ import Footer from './components/Footer';
 function App() {
   const [categories] = useState([
     {
-        name: "porfolio",
+        name: "portfolio",
         description: "a portfolio of web development work by Allison K. Smith",
     },
     {
@@ -24,7 +24,7 @@ const [currentCategory, setCurrentCategory] = useState(categories[0]);
        currentCategory={currentCategory}
       ></Nav>
       <main >
-        <Project></Project>
+        <Project currentCategory={currentCategory}></Project>
         <About></About>
       </main>
       <Footer></Footer>

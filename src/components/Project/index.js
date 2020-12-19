@@ -1,23 +1,18 @@
 import React from 'react';
-import photo from "../../assets/rrcr-dashboard.png";
+import ProjectList from '../ProjectList';
 
 function Project(props) {
-    
+    const { currentCategory } = props;
     const currentProject = {
-        name: "Roadrunner Capitol Reports",
-        description: "A php mysql web application to track legislation introduced by the NM Legislature",
+        name: "My Portfolio",
+        description: "A collection of web applications built by Allison K. Smith",
     };
     return(
         <section>
             <h1>{currentProject.name}</h1>
             <p>{currentProject.description}</p>
-            <div >
-                <img src = {photo}
-                className='project-image' 
-                style={{ width: "50%"}}  
-                alt="project photo" 
-                />
-            </div>
+            <ProjectList category={currentCategory.name} />
+            
         </section>
     );
 }
