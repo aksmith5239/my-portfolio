@@ -151,6 +151,9 @@ footer li {
   border-radius: 5px;
 }
 
+.error-message {
+  color: var(--secondary);
+}
 button {
   background-color:var(--tertiary); /* Green */
   border: none;
