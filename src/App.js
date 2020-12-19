@@ -4,6 +4,8 @@ import Nav from './components/Nav';
 import Project from './components/Project';
 import Footer from './components/Footer';
 import ContactForm from './components/Contact';
+import Resume from './components/Resume';
+
 
 function App() {
   const [categories] = useState([
@@ -25,6 +27,7 @@ const [currentCategory, setCurrentCategory] = useState(categories[0]);
        currentCategory={currentCategory}
       ></Nav>
       <main >
+        <Resume></Resume>
         <ContactForm></ContactForm>
         <Project currentCategory={currentCategory}></Project>
         <About></About>
