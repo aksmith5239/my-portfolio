@@ -83,11 +83,23 @@ nav a:hover, nav li:hover{
 }
 
 /* Style the footer */
-.footer {
+footer {
   background-color: var(--light-blue);
   padding: 10px;
+  margin-left: 10px;
+  align-items:center;
+  text-align:center;
+  justify-content: space-between;
+  display:inline-block;
+  width:100%;
 }
-
+footer ul {
+  justify-content: space-between;
+}
+footer li {
+  display: inline-block;
+  justify-content: space-between;
+}
 .portfolio-image {
   border: 1px solid var(--primary);
 }
