@@ -20,6 +20,9 @@ A React front end web portfolio of projects developed by Allison K. Smith. Inclu
 ## Installation
 Deployed to github pages. Open in browser. 
 
+http://aksmith5239.github.io/my-portfolio
+
+
 ## Usage
 Website used to showcase web development work.
 
