@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Modal({selectedProject}) {
+const Modal = ({ onClose, selectedProject}) => {
     const {name, description, url, github} = selectedProject;
     return(
       
@@ -12,7 +12,7 @@ function Modal({selectedProject}) {
                         {url}
                         {github}
                     </p>
-                    <button type="button">Close Modal</button>
+                    <button onClick={onClose} type="button">Close Modal</button>
                 </div>
             </div>
         

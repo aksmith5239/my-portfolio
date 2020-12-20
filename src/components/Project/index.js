@@ -7,12 +7,12 @@ function Project(props) {
 
   const toggleModal = (item, i) => {
     setSelectedProject({...item, index: i})
-    setIsModalOpen(true);
+    setIsModalOpen(!isModalOpen);
   }
   return (
     
     <div className="flex-row">
-     { isModalOpen && <Modal selectedProject={selectedProject} /> } 
+     { isModalOpen && <Modal onClose={toggleModal} selectedProject={selectedProject} /> } 
             {props.projects.map((item, i) => (
                 <img 
                 src = {require(`../../assets/${item.category}/${i}.png`).default}
