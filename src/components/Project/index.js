@@ -1,15 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
+import Modal from '../Modal';
 
 function Project(props) {
-  return (
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState();
 
+  const toggleModal = (item, i) => {
+    setSelectedProject({...item, index: i})
+    setIsModalOpen(true);
+  }
+  return (
+    
     <div className="flex-row">
+     { isModalOpen && <Modal selectedProject={selectedProject} /> } 
             {props.projects.map((item, i) => (
                 <img 
                 src = {require(`../../assets/${item.category}/${i}.png`).default}
                 className='project-image' 
-                // style={{ width: "25%"}}  
                 alt={item.name}
+                onClick={() => toggleModal(item, i)}
                 key={item.id} 
                 />
             ))}

@@ -186,6 +186,15 @@ footer li {
 .error-message {
   color: var(--secondary);
 }
+
+.modal-backdrop {
+  background: var(--secondary);
+}
+
+.modal-container {
+  background:var(--light);
+
+}
 button {
   background-color:var(--tertiary); /* Green */
   border: none;
