@@ -10,7 +10,9 @@ function Project(props) {
     setIsModalOpen(!isModalOpen);
   }
   return (
-    
+  <div className="container">
+
+  <h2>My Projects</h2>
     <div className="flex-row">
      { isModalOpen && <Modal onClose={toggleModal} selectedProject={selectedProject} /> } 
             {props.projects.map((item, i) => (
@@ -22,7 +24,8 @@ function Project(props) {
                 key={item.id} 
                 />
             ))}
-             </div>   
+             </div> 
+  </div>              
   );
 }
 

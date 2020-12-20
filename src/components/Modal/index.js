@@ -10,13 +10,13 @@ const Modal = ({ onClose, selectedProject}) => {
                     <p>
                         {description}  
                     </p>
-                        
-                       <button className="link-button"><a href={url}>Visit Web Site</a></button> 
-
-                       <button className="link-button"><a href={github}>Git Hub Repo</a></button> 
-                      
-                        
-                    <button onClick={onClose} type="button">Close Modal</button>
+                    <div className="modal-buttons">  
+                        <button className="link-button"><a href={url}>Visit Web Site</a></button>
+                        <div className="divider" /> 
+                        <button className="link-button"><a href={github}>Git Hub Repo</a></button> 
+                        <div className="divider" /> 
+                        <button className="close" onClick={onClose} type="button">Close Modal</button>
+                    </div> 
                 </div>
             </div>
         

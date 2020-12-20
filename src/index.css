@@ -4,13 +4,15 @@ main {
   padding: 50px 30px;
 }
 :root {
-  --primary:#133A70;
-  --secondary:#B03215;
-  --tertiary:#E69512;
+ 
+  --primary:#0E2C55;
+
+  --secondary:#960200;
+  --tertiary:#FF9000;
   --light:#F8F7F5;
-  --dark:#07162B;
+  --dark:#121420;
   --light-blue: #577399;
-  --light-tan: #C9BFAF;
+  --light-tan: #BFC3BA;
 
 }
 
@@ -35,7 +37,20 @@ body {
   color: var(--dark);
 }
 
+.container {
+  width: 85%;
+  min-height:100%;
+  display:grid;
+  grid-template-rows:1fr;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
+}
 
+p {
+  font-weight:lighter;
+}
 li {
   list-style: none;
 }
@@ -53,14 +68,9 @@ header a{
   padding: 14px 16px;
   text-decoration: none;
 }
-/* Style the top navigation bar */
-nav {
-  background-color: var(--primary) ;
-
-}
 
 /* Style the topnav links */
-nav a {
+.nav a {
   float: right;
   display: block;
   color: var(--light-tan);
@@ -70,76 +80,39 @@ nav a {
   text-decoration: none;
 }
 
-nav li{
-  float: right;
-  display: block;
-  color: var(--light-tan);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-/* Change color on hover */
-nav a:hover, nav li:hover{
-  background-color:var(--light-tan);
+.nav-link{
+  background-color:var(--primary);
   color: var(--secondary);
   border-radius:5px;
 }
-
-.aboutItem {
-  float: right;
-  color: var(--light-tan);
-  background-color: var(--primary);
-  margin-right:2px;
-  
-}
-
-.aboutItem a {
-  background-color:var(--light-tan);
+.nav-link:hover{
   color: var(--secondary);
-  border-radius:5px;
-}
-
-.aboutItem a:hover {
   background-color:var(--light-tan);
-  color: var(--secondary);
-  border-radius:5px;
 }
-.content {
-  background-color: var(--light);
-  padding: 10px;
-  height: 200px; /* Should be removed. Only for demonstration */
+.active{
+  color: var(--tertiary);
+  background: var(--light-blue);
+  border-radius: 5px;
 }
-
-
-.img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
-
 
 /* Style the footer */
-footer {
-  background-color: var(--light-blue);
-  padding: 10px;
-  align-items:center;
-  text-align:center;
-  justify-content: center;
-  display:flex;
-  
+.footer {
+display:hidden;
 }
-footer ul {
-  justify-content: center;
+ 
+.footer a{
+  text-decoration: none;
+  color:var(--dark);
 }
-footer li {
-  display: inline-block;
-  justify-content: center;
-  text-align:center;
-  padding: 10px;
+
+.footer a:hover{
+  text-decoration: none;
+  color:var(--tertiary);
 }
+/* ---IMAGES ---*/
 .portfolio-image {
   border: 1px solid var(--primary);
+  width: 90%;
 }
 
 .project-image {
@@ -150,18 +123,37 @@ footer li {
   
 }
 
+.img-thumbnail {
+  width: auto;
+  height: 300px;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+
+/*----------------*/
 .flex-row {
   display: flex;
   flex-wrap: wrap;
+  
 
 }
-
-.container {
-  width: 85%;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+.row {
+  display:flex;
+  flex-direction:column;
+  flex-wrap: wrap;
 }
+.column {
+  float:left;
+}
+.left {
+  width:100%;
+}
+
+.right {
+  width: 100%;
+}
+
+/*----contact form---*/
 
 .contact-form {
   display:block;
@@ -187,14 +179,7 @@ footer li {
   color: var(--secondary);
 }
 
-.modal-backdrop {
-  background: var(--secondary);
-}
-
-.modal-container {
-  background:var(--light);
-
-}
+/*--------Buttons--------*/
 button {
   background-color:var(--tertiary); /* Green */
   border: none;
@@ -206,15 +191,116 @@ button {
   font-size: 16px;
   border-radius:5px;
 }
-.navActive {
-  color: var(--tertiary);
-  background: var(--light-blue);
-  border-radius: 5px;
+
+button a{
+  text-decoration:none;
+  color: var(--primary);
+  font-weight: bold
 }
+.close{
+  background-color: var(--secondary);
+  color:var(--light);
+}
+
+.modal-backdrop {
+  background: var(--secondary);
+  position:absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:60%;
+  min-height:60%;
+  display:flex;
+  justify-content:center;
+  border-radius:5px;
+  overflow-y:scroll;
+}
+
+.modal-container {
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  background:var(--light-blue);
+  border:5px solid var(--secondary);
+  border-radius:8px;
+  justify-content: center;
+}
+
+.modal-container h3 {
+  padding-left:25px;
+  font-size: 30px;
+  color:var(--light);
+}
+.modal-container p{
+  width:80%;
+  padding-left:25px;
+  color:var(--light);
+  overflow-y:scroll;
+}
+
+.modal-buttons {
+  align-items: center;
+  overflow:auto;
+  margin-left:15px;
+
+}
+.divider {
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+
+
 
 /*larger screens */
 @media only screen and (min-width: 600px) {
   .project-image {
-    width: 25%;
+    width: 50%;
   }
+  .row {
+    flex-direction:row;
+  }
+  .left {
+    width:25%;
+  }
+  
+  .right {
+    width: 75%;
+  }
+  
+/* --Modal Styles --*/
+
+  /* Style the footer */
+.footer {
+  background-color: var(--light-blue);
+  padding: 10px;
+  align-items:center;
+  text-align:center;
+  justify-content: center;
+  display:flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width:100%;
+  height: 60px;
+}
+.footer ul {
+  justify-content: center;
+}
+.footer li {
+  display: inline-block;
+  justify-content: center;
+  text-align:center;
+  padding: 10px;
+}
+
+.modal-backdrop{
+  min-height:40%;
+}
+
+
+
 }

@@ -13,7 +13,6 @@ const projects =([
   url: "https://www.roadrunnercapitol.com",
   github: "",
   category: "portfolio"
-
 },
 {
   name:"Wizier",
@@ -25,8 +24,8 @@ const projects =([
 {
   name:"The Cutting Edge",
   description: "An ExpressJs, MongoDB web application to for small hair salon's to manage services and appointments",
-  url: "https://terahje.github.io/group-assignment",
-  github: " https://the-cutting-edge-20.herokuapp.com",
+  url: " https://the-cutting-edge-20.herokuapp.com",
+  github: "https://github.com/aksmith5239/cutting-edge",
   category: "portfolio"
 }, 
 {
@@ -57,10 +56,10 @@ function App() {
   // The renderPage method uses a switch statement to render the appropriate current page
   const renderPage = () => {
     switch (currentPage) {
-      case 'Projects':
-        return <Project projects={projects}/>;
       case 'Contact':
         return <ContactForm />;
+      case 'Projects':
+        return <Project projects={projects}/>;
       case 'Resume':
         return <Resume />;
       default:
@@ -77,54 +76,6 @@ function App() {
       <Footer></Footer>
     </div>
   );
-
-
-
-
-
-
-//   const [categories] = useState([
-//     {
-//         name: "portfolio",
-//         description: "a portfolio of web development work by Allison K. Smith",
-//     },
-//     {
-//         name: "resume",
-//         description: "a downloadable resume of Allison K. Smith's web development work",
-//     }
-// ]);
-
-// const [currentCategory, setCurrentCategory] = useState(categories[0]);  
-
-// const [contactSelected, setContactSelected] = useState(false);
-
-
-//   return (
-//     <div>
-//       <Nav 
-//        categories={categories}
-//        setCurrentCategory={setCurrentCategory}
-//        currentCategory={currentCategory}
-//        contactSelected={contactSelected}
-//        setContactSelected={setContactSelected}
-//       ></Nav>
-//       <main >
-//         {!contactSelected ? (
-//         <>
-//         <Project currentCategory={currentCategory}></Project>
-//         <About></About>
-//         <Resume></Resume>
-//         </>
-//         ) : (
-//           <ContactForm></ContactForm>
-//         )}
-       
-       
-
-//       </main>
-//       <Footer></Footer>
-//     </div>
-//   );
 }
 
 export default App;
