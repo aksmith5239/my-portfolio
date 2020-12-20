@@ -18,19 +18,35 @@ function App() {
         description: "a downloadable resume of Allison K. Smith's web development work",
     }
 ]);
+
 const [currentCategory, setCurrentCategory] = useState(categories[0]);  
+
+const [contactSelected, setContactSelected] = useState(false);
+
+// const [resumeSelected, setResumeSelected] = useState(false);
+
   return (
     <div>
       <Nav 
        categories={categories}
        setCurrentCategory={setCurrentCategory}
        currentCategory={currentCategory}
+       contactSelected={contactSelected}
+       setContactSelected={setContactSelected}
       ></Nav>
       <main >
-        <Resume></Resume>
-        <ContactForm></ContactForm>
+        {!contactSelected ? (
+        <>
         <Project currentCategory={currentCategory}></Project>
         <About></About>
+        <Resume></Resume>
+        </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
+       
+       
+
       </main>
       <Footer></Footer>
     </div>

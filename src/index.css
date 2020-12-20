@@ -35,6 +35,7 @@ body {
   color: var(--dark);
 }
 
+
 li {
   list-style: none;
 }
@@ -55,10 +56,21 @@ header a{
 /* Style the top navigation bar */
 nav {
   background-color: var(--primary) ;
+
 }
 
 /* Style the topnav links */
-nav a, nav li {
+nav a {
+  float: right;
+  display: block;
+  color: var(--light-tan);
+  text-align: center;
+  align-items: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li{
   float: right;
   display: block;
   color: var(--light-tan);
@@ -66,13 +78,32 @@ nav a, nav li {
   padding: 14px 16px;
   text-decoration: none;
 }
-
 /* Change color on hover */
 nav a:hover, nav li:hover{
   background-color:var(--light-tan);
   color: var(--secondary);
+  border-radius:5px;
 }
 
+.aboutItem {
+  float: right;
+  color: var(--light-tan);
+  background-color: var(--primary);
+  margin-right:2px;
+  
+}
+
+.aboutItem a {
+  background-color:var(--light-tan);
+  color: var(--secondary);
+  border-radius:5px;
+}
+
+.aboutItem a:hover {
+  background-color:var(--light-tan);
+  color: var(--secondary);
+  border-radius:5px;
+}
 .content {
   background-color: var(--light);
   padding: 10px;
