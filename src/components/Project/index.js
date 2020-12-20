@@ -2,13 +2,18 @@ import React from 'react';
 
 function Project(props) {
   return (
-    <ul className="list-group">
-      {props.projects.map(item => (
-        <li className="list-group-item" key={item.id}>
-          {item.name}
-        </li>
-      ))}
-    </ul>
+
+    <div className="flex-row">
+            {props.projects.map((item, i) => (
+                <img 
+                src = {require(`../../assets/${item.category}/${i}.png`).default}
+                className='project-image' 
+                // style={{ width: "25%"}}  
+                alt={item.name}
+                key={item.id} 
+                />
+            ))}
+             </div>   
   );
 }
 

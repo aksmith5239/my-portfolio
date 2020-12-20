@@ -146,6 +146,7 @@ footer li {
   border: 1px solid var(--secondary);
   border-radius: 5px;
   padding: 2px;
+  width: 75%;
   
 }
 
@@ -200,4 +201,11 @@ button {
   color: var(--tertiary);
   background: var(--light-blue);
   border-radius: 5px;
+}
+
+/*larger screens */
+@media only screen and (min-width: 600px) {
+  .project-image {
+    width: 25%;
+  }
 }
