@@ -13,7 +13,7 @@ function Project(props) {
   <div className="container">
 
   <h2>My Projects</h2>
-  <p>Click the image of the project to view details and links to project.</p>
+  <p>Click the image of the project to view details and links to each project.</p>
     <div className="flex-row">
      { isModalOpen && <Modal onClose={toggleModal} selectedProject={selectedProject} /> } 
             {props.projects.map((item, i) => (
@@ -22,7 +22,7 @@ function Project(props) {
                 className='project-image' 
                 alt={item.name}
                 onClick={() => toggleModal(item, i)}
-                key={item.id} 
+                key={item.name} 
                 />
             ))}
              </div> 

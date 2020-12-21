@@ -116,10 +116,9 @@ display:hidden;
 }
 
 .project-image {
-  border: 1px solid var(--secondary);
-  border-radius: 5px;
-  padding: 2px;
-  width: 75%;
+  border-radius:5%;
+  padding: 10px;
+  width: 65%;
   
 }
 
@@ -200,16 +199,17 @@ button a{
 .close{
   background-color: var(--secondary);
   color:var(--light);
+  border: 1px solid var(--primary);
 }
 
 .modal-backdrop {
-  background: var(--secondary);
+  /* background: var(--secondary); */
   position:absolute;
   left:50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width:60%;
-  min-height:60%;
+  width:100%;
+  min-height:100%;
   display:flex;
   justify-content:center;
   border-radius:5px;
@@ -294,10 +294,18 @@ button a{
   padding: 10px;
 }
 
-.modal-backdrop{
+.modal-backdrop {
+  /* background: var(--secondary); */
+  position:absolute;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width:60%;
   min-height:40%;
+  display:flex;
+  justify-content:center;
+  border-radius:5px;
+  overflow-y:scroll;
 }
-
-
 
 }
