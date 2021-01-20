@@ -48,7 +48,16 @@ const projects =([
   url: "https://aksmith5239.github.io/weather-dash/",
   github: " https://github.com/aksmith5239/weather-dash",
   category: "portfolio"
-}]);
+},
+{
+  name:"The Cutting Edge - Final Cut",
+  description: "MERN Application. A scheduling system for hair stylists that allows a user to choose a style, book the style and send a message for a stylist to accept and book the appointment. ",
+  url: "",
+  github: " https://github.com/aksmith5239/the-cutting-edge-final-cut",
+  category: "portfolio"
+}, 
+
+]);
 
 function App() {
   const [currentPage, handlePageChange] = useState('Home');
